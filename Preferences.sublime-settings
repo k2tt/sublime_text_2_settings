@@ -1,0 +1,16 @@
+{
+	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+	"disable_formatted_linebreak": true,
+	"disable_tab_abbreviations": true,
+	"draw_white_space": "all",
+	"font_size": 16,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"open_files_in_new_window": false,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": false
+}

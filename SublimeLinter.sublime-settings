@@ -1,0 +1,75 @@
+{
+	"sublimelinter": "save-only",
+	"jshint_options":
+		{
+				//デフォルト設定
+				/*
+				"evil": true, // evalに警告を出さないようにします
+				"regexdash": true, // 正規表現の最後にエスケープされていない-がある場合に警告を出さないようにします
+				"browser": true, // ブラウザのグローバルオブジェクトを定義済みとします
+				"wsh": true, // Windows Script Hostのグローバルオブジェクトを定義済みにします
+				"trailing": true, // 行末の空白を禁止します
+				"sub": true, // []表記に対する警告を出さないようにします
+				*/
+
+				// jshint ユーザーオプション参考
+				// http://blog.craftgear.net/50832ff38cdc8fb415000001/title
+
+				//制限系
+				"curly": true, // ループブロックと条件ブロックを常に中括弧で囲うことを強制
+				"eqeqeq": true, // == 演算子と != 演算子の使用を禁止
+				"latedef": true, // 変数を定義する前に使うのを禁止
+				"unused": true, // 変数が利用されていない場合に警告
+				"noempty": true, // 空のブロックがある場合に警告
+				"regexp": true, // 正規表現で安全でない . の使用を禁止
+				"strict": true, // EcmaScript5のstrict modeで実行可能なコードを強制
+				//"camelcase": true, // 変数名はキャメルケースかアンダースコアの使用を強制
+				//"undef": true, // 明示的に宣言されていない変数の使用を禁止
+				
+				//制限緩和系
+				"devel" : true, // consoleやalertを許可
+				"trailing": false, // 行末の空白を許可します
+				"globals": {
+						"jQuery": false // jQuery というグローバル変数を許可するが上書きは禁止
+				}
+				
+		},
+
+		// CSSLint ユーザーオプション参考
+		// https://gist.github.com/hail2u/1303613
+		"csslint_options":
+		{
+				"adjoining-classes": "warning", // .foo.barのようにクラス名を続けて書いた場合
+				"box-model": false, // 枠線とパディングはwidthやheight等に含まれないので、同時に指定すると多分君が思ってもみない結果になるよ。
+				"box-sizing": "warning",
+				"compatible-vendor-prefixes": false, // ベンダー拡張プリフィックスを使う時は必ず全部まとめて指定
+				"display-property-grouping": true, // 無意味なプロパティが指定されている
+				"duplicate-background-images": "warning",
+				"duplicate-properties": true, // 一つのセレクタに同じ複数のプロパティが書かれている
+				"empty-rules": true, // 空のルールがある
+				"errors": true,
+				"fallback-colors": "warning",
+				"floats": false, // 10回以上使っていたら
+				"font-faces": false, // 5個以上フォントが指定されている
+				"font-sizes": false, // 10回以上使っていたら
+				"gradients": false, // CSSグラデーションはまだ標準に則った実装がないためベンダー拡張プリフィックスを使う
+				"ids": false, // IDは控える。HTMLと密接に関わるものだし、そもそも再利用できない
+				"import": false, // 並列ダウンロード出来ないブラウザがあるから@importは避ける
+				"important": false, // importantは控える。継承絡みで問題が起こりやすい
+				"known-properties": true, // 謎のプロパティ
+				"outline-none": "warning",
+				"overqualified-elements": "warning", // サイズを抑え、セレクタを適用する時のパフォーマンスも向上するため、要素名は出来るだけ省く
+				"qualified-headings": false, // 見出し要素はセレクタの先頭に書くべき。そうすれば再利用可能だし、パフォーマンス的にもメリットがある
+				"regex-selectors": "warning", // 正規表現に似た属性セレクタは遅い
+				"rules-count": "warning",
+				"shorthand": "warning", // marginやpaddingはまとめとけ
+				"star-property-hack": false,
+				"text-indent": false, // マイナス方向のtext-indent。アラビア語みたいに右から左に読む言語だとまずいことになるため
+				"underscore-property-hack": false,
+				"unique-headings": false, // 見出し要素を何度も設定する必要はないはず
+				"universal-selector": false, // 全称セレクタは遅い
+				"vendor-prefix": true, //ベンダー拡張プリフィックスを使うときは、必ず標準のプロパティも書く
+				"zero-units": "warning" // 0の時は単位を省略
+		}
+
+}
